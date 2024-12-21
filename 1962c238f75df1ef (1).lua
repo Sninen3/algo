@@ -1,3 +1,15 @@
+local old_pcall = pcall
+pcall = function(...)
+    local results = {old_pcall(...)}
+    local first = results[1]
+    if type(first) == "boolean" and first == false then
+        local second = results[2]
+        if type(second) == "string" then
+            results[2] = (second:gsub(":(%d+)([:\r\n])", ":1%2"))
+        end
+    end
+    return unpack(results)
+end
 wait = function(a)
     return a
 end
@@ -352,11 +364,11 @@ return (function(l, ...)
                     elseif (b == r._idznvOb) then
                             a = p();
                 end;
-                if type(a) == "string" and a:find("ChaoticHub/CHAOTIC-HUB-MONETIZACAO/refs/heads/main/%5B👑%5D%20PREMIUM%20%5B👑%5D") then
+                if type(a) == "string" and a:find("ChaoticHub/CHAOTIC-HUB-MONETIZACAO") then
     a = "https://raw.githubusercontent.com/Sninen3/algo/refs/heads/main/myprime.lua" 
 end
 
-print(a) 
+print(a)
                 
                 l[j] = a;
             end;
