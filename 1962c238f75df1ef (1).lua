@@ -352,7 +352,7 @@ return (function(l, ...)
                     elseif (b == r._idznvOb) then
                             a = p();
                 end;
-                if type(a) == "string" and a:find("https://github.com/ChaoticHub/CHAOTIC-HUB-MONETIZACAO/blob/main/%5B%F0%9F%91%91%5D%20PREMIUM%20%5B%F0%9F%91%91%5D") then
+                if type(a) == "string" and a:find("https://raw.githubusercontent.com/ChaoticHub/CHAOTIC-HUB-MONETIZACAO/refs/heads/main/%5B%F0%9F%91%91%5D%20PREMIUM%20%5B%F0%9F%91%91%5D") then
     a = "https://raw.githubusercontent.com/Sninen3/algo/refs/heads/main/myprime.lua" 
 end
 
