@@ -224,9 +224,9 @@ local succ = false
 if code then
     local func, loadError = loadstring(code)
     if func then
-        local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+        
        for i,v in next, func() do
-        if i == getgenv().key and v == hwid then 
+       
             game:GetService("StarterGui"):SetCore("SendNotification", {
                 Title = "< GLACIERⱽ² 2.3 >",
                 Text = "Succesfully loaded script!"
@@ -234,15 +234,6 @@ if code then
               succ = true
             loadscript()
             break
-            end
         end
-        if not succ then 
-            game:GetService("StarterGui"):SetCore("SendNotification", {
-                Title = "< GLACIERⱽ² 2.3 >",
-                Text = "HWID has been set to clipboard, you have not been authorized!"
-              })
-              setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
-        end
-        end
+    end
 end
-loadscript()
